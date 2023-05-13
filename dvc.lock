@@ -27,30 +27,30 @@ stages:
       params.yaml:
         train.batch_size: 128
         train.dropout: 0.45
-        train.hidden_units: 64
+        train.hidden_units: 128
         train.lr: 0.001
         train.num_epochs: 2
     outs:
     - path: dvclive/metrics.json
       hash: md5
-      md5: db13b05243ad59a03d4f8f8d812445df
+      md5: 218889181d5a6cf91632653406b27cf8
       size: 54
     - path: dvclive/plots/metrics/accuracy.tsv
       hash: md5
-      md5: 77a7026f16526e96cd26f1ab9edd6b3d
+      md5: 35de6e677fc803e8daf4393c17cdf240
       size: 56
     - path: output/myfmmodel.keras
       hash: md5
-      md5: ab4601ecafefcb4dca27a0fc2c15baf9
-      size: 3681312
+      md5: aef0b45165cac18c629e7ae92308c009
+      size: 7324888
     - path: output/myfmmodel.tar.gz
       hash: md5
-      md5: 4db82c8d39e1ccf5a7fd64a58f82ec11
-      size: 3378668
+      md5: f4676b6a775bf79f456680fd42de235f
+      size: 6754518
     - path: output/train_logs.csv
       hash: md5
-      md5: 822e749d10c369cc467d8981d0361a42
-      size: 100
+      md5: 540870a9e477ed42a156f84684fe899f
+      size: 101
   evaluate:
     cmd: python src/evaluate.py
     deps:
@@ -60,8 +60,8 @@ stages:
       size: 54950285
     - path: output/myfmmodel.keras
       hash: md5
-      md5: ab4601ecafefcb4dca27a0fc2c15baf9
-      size: 3681312
+      md5: aef0b45165cac18c629e7ae92308c009
+      size: 7324888
     - path: src/evaluate.py
       hash: md5
       md5: d55658c1947e760905f8784a695033b4
@@ -69,14 +69,14 @@ stages:
     outs:
     - path: output/metrics.json
       hash: md5
-      md5: be2c1c86da485c77f3e63fd175b15de7
-      size: 61
+      md5: 423d418d3df35d13a9b1f4f46653ca41
+      size: 60
     - path: output/predictions.json
       hash: md5
-      md5: feab826d9113679077f9316cf36fe5f9
+      md5: f50d27c5ab1fde74f98825ff684faa87
       size: 310000
     - path: output/test/samples_of_mispredicted_images/
       hash: md5
-      md5: a4256cc9bbd4c4f31f3c46ef20811a92.dir
-      size: 176144
+      md5: 1d6a190f6f6545c98abd36248e44ec30.dir
+      size: 175648
       nfiles: 10
